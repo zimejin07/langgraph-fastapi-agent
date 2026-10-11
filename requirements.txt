@@ -1,0 +1,19 @@
+# Web layer
+fastapi>=0.115
+uvicorn[standard]>=0.30
+
+# Agent layer
+# Tested with langgraph 1.2, langgraph-checkpoint-sqlite 3.1, langchain-anthropic 1.7, langchain-core 1.6.
+# These libraries change quickly, so the major version is capped on purpose.
+langgraph>=1.0,<2
+langgraph-checkpoint-sqlite>=3.0,<4
+langchain-anthropic>=1.0,<2
+langchain-core>=1.0,<2
+
+# Misc
+python-dotenv>=1.0
+tzdata            # timezone database for the get_current_time tool (Windows has none built in)
+
+# Only needed for client_demo.py and the tests
+httpx>=0.27
+pytest>=8
